@@ -1,0 +1,110 @@
+body{
+	background: radial-gradient(circle, blue 10%, purple 90%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: fit-content;
+	height: 800px;
+}
+.main{
+	width: 60%;
+	padding: 100px 0px;
+	text-align: center;
+}
+.main h1{
+	width: 100%;
+	font-family: "Bungee Spice", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 40px;
+}
+.menu{
+	width: 100%;
+	margin-top: 50px
+}
+.item {
+  height: fit-content;
+  padding: 50px;
+  cursor: pointer;
+  font-family: "Bungee Spice", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border: solid 4px transparent;
+}
+
+.item:hover {
+  border-image: linear-gradient(#f3ab00, #ca0e00) 1;
+  animation: border;
+}
+
+.grid{
+	width: 80%;
+	height: 600px;
+	padding: 20px 0px;
+	gap: 10px;
+	position: relative;
+	z-index: 0;
+}
+.item2{
+	background: yellow;
+	border-radius: 10px;
+	font-size: 50px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.item2 *{
+	display: none;
+}
+.rot{
+	animation: rot;
+	animation-duration: 1s;
+}
+@keyframes rot{
+	from{
+		transform: rotateY(0);
+	}
+	from{
+		transform: rotateY(180deg);
+	}
+}
+.matched{
+	background: green;
+}
+.congrat{
+	display: grid;
+	justify-items: center;
+	padding: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-family: "Bungee Spice", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 50px;
+	animation: congrat 2s;
+}
+@keyframes congrat{
+	from{
+		top: 0px;
+	}
+	to{
+		top: 50%;
+	}
+}
+.home{
+	width: 50px;
+	height: 50px;
+	border-radius: 30px;
+	background: purple;
+	color: white;
+	font-size: 50%;
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+}
